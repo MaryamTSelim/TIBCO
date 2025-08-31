@@ -4,7 +4,7 @@
 	<CenterName>Trade Center</CenterName>
 	<ListOfCourses>
 		<Course xmlns="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Course">
-				<ID>1</ID>
+				<ID>004</ID>
 				<Title>Course 1</Title>
 				<Duration>12</Duration>
 				<Price>100.00</Price>
@@ -16,7 +16,7 @@
 				</Author>
 		</Course>
 		<Course xmlns="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Course">
-				<ID>1</ID>
+				<ID>002</ID>
 				<Title>Course 2</Title>
 				<Duration>4</Duration>
 				<Price>150.00</Price>
@@ -28,8 +28,8 @@
 				</Author>
 		</Course>
 		<Course xmlns="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Course">
-				<ID>1</ID>
-				<Title>Course 1</Title>
+				<ID>003</ID>
+				<Title>Course 3</Title>
 				<Duration>10</Duration>
 				<Price>200.00</Price>
 				<Genre>Finance</Genre>
