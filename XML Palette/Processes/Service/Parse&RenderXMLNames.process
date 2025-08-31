@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pd:ProcessDefinition xmlns:pfx="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLCatalog_Request" xmlns:pfx2="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Catalog" xmlns:ns="http://www.tibco.com/pe/WriteToLogActivitySchema" xmlns:pfx3="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Course" xmlns:pfx4="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLCatalog_Response" xmlns:pfx5="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Names" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:ns2="http://www.tibco.com/namespaces/tnt/plugins/file/v2" xmlns:ns1="http://www.tibco.com/namespaces/tnt/plugins/file" xmlns:ns4="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Common//Header" xmlns:ns3="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Common/Context" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns6="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Author" xmlns:ns5="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Common/Response" xmlns:pd="http://xmlns.tibco.com/bw/process/2003">
+<pd:ProcessDefinition xmlns:pfx6="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLNames_Response" xmlns:pfx7="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLNames_Request" xmlns:pfx="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLCatalog_Request" xmlns:pfx2="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Catalog" xmlns:ns="http://www.tibco.com/pe/WriteToLogActivitySchema" xmlns:pfx3="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Course" xmlns:pfx4="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLCatalog_Response" xmlns:pfx5="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Names" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:ns2="http://www.tibco.com/namespaces/tnt/plugins/file/v2" xmlns:ns1="http://www.tibco.com/namespaces/tnt/plugins/file" xmlns:ns4="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Common//Header" xmlns:ns3="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Common/Context" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns6="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Author" xmlns:ns5="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Common/Response" xmlns:pd="http://xmlns.tibco.com/bw/process/2003">
     <xs:import xmlns:xs="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Catalog" schemaLocation="/Resources/Schemas/Model/Catalog.xsd"/>
     <xs:import xmlns:xs="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLCatalog_Response" schemaLocation="/Resources/Schemas/Service/ParseRenderXMLCatalog_Response.xsd"/>
     <xs:import xmlns:xs="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Course" schemaLocation="/Resources/Schemas/Model/Course.xsd"/>
     <xs:import xmlns:xs="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Names" schemaLocation="/Resources/Schemas/Model/Names.xsd"/>
     <xs:import xmlns:xs="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLCatalog_Request" schemaLocation="/Resources/Schemas/Service/ParseRenderXMLCatalog_Request.xsd"/>
+    <xs:import xmlns:xs="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLNames_Response" schemaLocation="/Resources/Schemas/Service/ParseRenderXMLNames_Response.xsd"/>
+    <xs:import xmlns:xs="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLNames_Request" schemaLocation="/Resources/Schemas/Service/ParseRenderXMLNames_Request.xsd"/>
     <pd:name>Processes/Service/Parse&amp;RenderXMLNames.process</pd:name>
     <pd:startName>Start</pd:startName>
-    <pd:startType ref="pfx:ParseRenderXMLCatalog_Request"/>
+    <pd:startType ref="pfx7:ParseRenderXMLNames_Request"/>
     <pd:startX>156</pd:startX>
     <pd:startY>114</pd:startY>
     <pd:returnBindings>
-        <pfx4:ParseRenderXMLCatalog_Response>
+        <pfx6:ParseRenderXMLNames_Response>
             <ns4:Header>
                 <ns3:Context>
                     <ns3:correlationId>
-                        <xsl:value-of select="$Start/pfx:ParseRenderXMLCatalog_Request/ns4:Header/ns3:Context/ns3:correlationId"/>
+                        <xsl:value-of select="$Start/pfx7:ParseRenderXMLNames_Request/ns4:Header/ns3:Context/ns3:correlationId"/>
                     </ns3:correlationId>
                 </ns3:Context>
                 <ns4:timestamp>
                     <xsl:value-of select="current-dateTime()"/>
                 </ns4:timestamp>
             </ns4:Header>
-            <pfx4:Body>
+            <pfx6:Body>
                 <ns5:Response>
                     <ns5:message>
-                        <xsl:value-of select="&quot;done&quot;"/>
+                        <xsl:value-of select="&quot;SUCCESS&quot;"/>
                     </ns5:message>
                     <ns5:responseStatus>
                         <xsl:value-of select="&quot;SUCCESS&quot;"/>
                     </ns5:responseStatus>
                 </ns5:Response>
-            </pfx4:Body>
-        </pfx4:ParseRenderXMLCatalog_Response>
+            </pfx6:Body>
+        </pfx6:ParseRenderXMLNames_Response>
     </pd:returnBindings>
     <pd:endName>End</pd:endName>
-    <pd:endType ref=""/>
+    <pd:endType ref="pfx6:ParseRenderXMLNames_Response"/>
     <pd:endX>906</pd:endX>
     <pd:endY>114</pd:endY>
     <pd:errorSchemas/>
@@ -52,7 +54,7 @@
         <pd:inputBindings>
             <ns2:ReadActivityInputClass>
                 <fileName>
-                    <xsl:value-of select="concat($Start/pfx:ParseRenderXMLCatalog_Request/pfx:Body/pfx:sourcePath, $Start/pfx:ParseRenderXMLCatalog_Request/pfx:Body/pfx:sourceFileName)"/>
+                    <xsl:value-of select="concat($Start/pfx7:ParseRenderXMLNames_Request/pfx7:Body/pfx7:sourcePath, $Start/pfx7:ParseRenderXMLNames_Request/pfx7:Body/pfx7:sourceFileName)"/>
                 </fileName>
             </ns2:ReadActivityInputClass>
         </pd:inputBindings>
@@ -104,8 +106,15 @@
             <pd:conditionType>always</pd:conditionType>
         </pd:transition>
         <pd:transition>
-            <pd:from>Log</pd:from>
+            <pd:from>Render XML</pd:from>
             <pd:to>end</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Log</pd:from>
+            <pd:to>Render XML</pd:to>
             <pd:lineType>Default</pd:lineType>
             <pd:lineColor>-16777216</pd:lineColor>
             <pd:conditionType>always</pd:conditionType>
@@ -124,6 +133,23 @@
                         <xsl:value-of select="$currentName/pfx5:Name"/>
                     </message>
                 </ns:ActivityInput>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Render XML">
+            <pd:type>com.tibco.plugin.xml.XMLRendererActivity</pd:type>
+            <pd:resourceType>ae.activities.XMLRendererActivity</pd:resourceType>
+            <pd:x>641</pd:x>
+            <pd:y>114</pd:y>
+            <config>
+                <renderAsText>text</renderAsText>
+                <validateInput>true</validateInput>
+                <textEncoding>UTF-8</textEncoding>
+                <term ref="pfx5:Name"/>
+            </config>
+            <pd:inputBindings>
+                <pfx5:Name>
+                    <xsl:value-of select="$currentName/pfx5:Name"/>
+                </pfx5:Name>
             </pd:inputBindings>
         </pd:activity>
     </pd:group>

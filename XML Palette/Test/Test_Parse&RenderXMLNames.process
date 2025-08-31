@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pd:ProcessDefinition xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pfx="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Common/Context" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:ns="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLCatalog_Request" xmlns:ns2="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Common//Header">
+<pd:ProcessDefinition xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pfx="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Common/Context" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:ns="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLCatalog_Request" xmlns:ns2="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Common//Header" xmlns:ns3="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLNames_Request">
     <pd:name>Test/Test_Parse&amp;RenderXMLNames.process</pd:name>
     <pd:startName>Start</pd:startName>
     <pd:startX>150</pd:startX>
@@ -20,26 +20,26 @@
             <processName>/Processes/Service/Parse&amp;RenderXMLNames.process</processName>
         </config>
         <pd:inputBindings>
-            <ns:ParseRenderXMLCatalog_Request>
+            <ns3:ParseRenderXMLNames_Request>
                 <ns2:Header>
                     <pfx:Context>
                         <pfx:correlationId>
-                            <xsl:value-of select="123"/>
+                            <xsl:value-of select="'1234'"/>
                         </pfx:correlationId>
                     </pfx:Context>
                     <ns2:timestamp>
                         <xsl:value-of select="current-dateTime()"/>
                     </ns2:timestamp>
                 </ns2:Header>
-                <ns:Body>
-                    <ns:sourcePath>
+                <ns3:Body>
+                    <ns3:sourcePath>
                         <xsl:value-of select="'C:\Users\marya\Desktop\TIBCO\XML Palette\Resources\Files\'"/>
-                    </ns:sourcePath>
-                    <ns:sourceFileName>
+                    </ns3:sourcePath>
+                    <ns3:sourceFileName>
                         <xsl:value-of select="'Names.xml'"/>
-                    </ns:sourceFileName>
-                </ns:Body>
-            </ns:ParseRenderXMLCatalog_Request>
+                    </ns3:sourceFileName>
+                </ns3:Body>
+            </ns3:ParseRenderXMLNames_Request>
         </pd:inputBindings>
     </pd:activity>
     <pd:transition>
