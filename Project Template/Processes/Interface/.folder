@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository:repository xmlns:Repository="http://www.tibco.com/xmlns/repo/types/2002">
+    <folder resourceType="ae.designerfolder" name="Interface" propLocks="" allowUserToChangeIcon="false" sortContents="false" acceptsResources="true" allowDuplicates="false">
+        <description>It will contain all the process definitions that will receive a message request from the orchestration
+
+layer and implement a business logic workflow, for instance</description>
+        <fixedChildren/>
+    </folder>
+</Repository:repository>

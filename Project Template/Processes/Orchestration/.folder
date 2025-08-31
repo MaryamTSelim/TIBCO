@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository:repository xmlns:Repository="http://www.tibco.com/xmlns/repo/types/2002">
+    <folder resourceType="ae.designerfolder" name="Orchestration" propLocks="" allowUserToChangeIcon="false" sortContents="false" acceptsResources="true" allowDuplicates="false">
+        <description>all the process definitions responsible
+
+to orchestrate the business logic by invoking one or more functional services.
+By other words, that means that the orchestration services are not designed to invoke external and
+
+systems </description>
+        <fixedChildren/>
+    </folder>
+</Repository:repository>
