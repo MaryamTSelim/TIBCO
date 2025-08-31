@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns:Course="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Course"
+	 xmlns:Author="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Author"
+	 targetNamespace="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Course"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Model/Author"/>
+	<xs:element name="Course">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ID" type="xs:int"/>
+				<xs:element name="Title" type="xs:string"/>
+				<xs:element name="Duration" type="xs:int"/>
+				<xs:element name="Price" type="xs:float"/>
+				<xs:element name="Genre">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="IT"/>
+							<xs:enumeration value="Finance"/>
+							<xs:enumeration value="Self Help"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="Author:Author"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

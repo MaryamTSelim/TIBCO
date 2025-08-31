@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns:ParseRenderXMLCatalog_Response="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLCatalog_Response"
+	 xmlns:Response="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Common/Response"
+	 xmlns:Header="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Common//Header"
+	 targetNamespace="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Service/ParseRenderXMLCatalog_Response"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Common//Header"/>
+	<xs:import namespace="http://www.tibco.com/schemas/XML Palette/Resources/Schemas/Common/Response"/>
+	<xs:element name="ParseRenderXMLCatalog_Response">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Header:Header"/>
+				<xs:element ref="ParseRenderXMLCatalog_Response:Body"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Body">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Response:Response"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
