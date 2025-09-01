@@ -1,0 +1,2 @@
+C:\Users\marya\Desktop\TIBCO\File Palette\Resources\Files\Input\Temp 1.txt	CONTENT ::	This is the content of temp 1.txt
+C:\Users\marya\Desktop\TIBCO\File Palette\Resources\Files\Input\Temp 2.txt	CONTENT ::	This is the content of temp 2.txt
